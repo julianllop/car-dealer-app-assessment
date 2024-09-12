@@ -1,8 +1,14 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+First, open the terminal at /car-dealer-app and install node_modules:
+
+```bash
+npm i
+# or
+npm install
+```
+
+Once you have all dependecies installed you can run the development server:
 
 ```bash
 npm run dev
@@ -16,21 +22,44 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How should it look once you open [http://localhost:3000](http://localhost:3000)?
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+You should be able to see this view:
 
-## Learn More
+![alt text](image.png)
 
-To learn more about Next.js, take a look at the following resources:
+You may notice you can't go anyware if you press the "NEXT" button.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+That's okay, only if you choose a Vehicle Make and a Year Model you will be able to press the button and it's going to
+look like this:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+![alt text](image-1.png)
 
-## Deploy on Vercel
+Now you can press the "NEXT" button and you will be redirected to /result/[makeId]/[year] and it will show all vehicles
+available from that Make and that Year you chose.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Take a look:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![alt text](image-2.png)
+
+As you can tell you can press the "home" link which it's going to redirect you to the home screen where you can start
+over with other options.
+
+## Stop the application
+
+Type the next comand on your terminal and press enter:
+
+```bash
+Ctrl + C
+```
+
+## Some information about the project
+
+This application is developed in Next.js which allows the developers to make use of advanced concepts in frontend
+developement, such as File-Based Routing which means each file inside the pages folder in Next.js automatically defines
+a route, and one of the main reasons why people choose Next over React is Server-Side Rendering(SSR) and Static
+Generation(SSG): Next.js supports both server-side rendering and static site generation. This means the result routes
+will be pre-rendered at build time(SSG). This enhances load speed and Search Engine Optimization(SEO).
+
+For the styling Tailwind CSS is a pretty fast way to make your app look good and modern thans to the predefined classes
+you can use on your components to make a uniform UI.
